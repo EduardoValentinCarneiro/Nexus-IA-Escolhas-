@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NEXUS - O Último Escolhido</title>
+
+<link rel="icon" href="img/nexus_favicon.png">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<header>
+
+    <h1>NEXUS</h1>
+
+    <button id="btnConquistas">
+        🏆 Conquistas
+    </button>
+
+</header>
+
+<div id="painelConquistas" class="hidden">
+
+    <h2>Conquistas</h2>
+
+    <div id="listaConquistas"></div>
+
+    <div id="estatisticas"></div>
+
+    <button onclick="fecharConquistas()">
+        Fechar
+    </button>
+
+</div>
+
+<main>
+
+    <div class="progresso">
+
+        <span id="capitulo">
+            Capítulo 1 de 8
+        </span>
+
+        <div class="barra">
+
+            <div id="barraProgresso"></div>
+
+        </div>
+
+    </div>
+
+    <section id="jogo">
+
+        <h2 id="tituloHistoria">
+            O Início
+        </h2>
+
+        <p id="textoHistoria"></p>
+
+        <div id="opcoes"></div>
+
+    </section>
+
+    <section id="finalTela" class="hidden">
+
+        <img
+            id="imagemFinal"
+            src=""
+            alt="Final"
+        >
+
+        <h2 id="tituloFinal"></h2>
+
+        <p id="descricaoFinal"></p>
+
+        <div id="contadorFinais"></div>
+
+        <button onclick="reiniciarJogo()">
+            Jogar Novamente
+        </button>
+
+    </section>
+
+</main>
+
+<footer>
+
+    Feito por Eduardo Valentin Carneiro
+
+</footer>
+
+<audio id="somClique"></audio>
+<audio id="somFinal"></audio>
+<audio id="somConquista"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>

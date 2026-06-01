@@ -1,0 +1,420 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:#e0e0e0;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+}
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+header{
+    width:100%;
+    padding:20px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(20,20,20,.9);
+
+    border-bottom:1px solid #333;
+
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+header h1{
+    color:#ffffff;
+    letter-spacing:3px;
+    font-size:2rem;
+}
+
+#btnConquistas{
+
+    background:#2f2f2f;
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#btnConquistas:hover{
+    background:#444;
+    transform:translateY(-2px);
+}
+
+main{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:40px 20px;
+}
+
+.progresso{
+    margin-bottom:40px;
+}
+
+#capitulo{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#bdbdbd;
+}
+
+.barra{
+
+    width:100%;
+    height:18px;
+
+    background:#222;
+
+    border-radius:50px;
+
+    overflow:hidden;
+}
+
+#barraProgresso{
+
+    width:12.5%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #777,
+        #ddd
+    );
+
+    transition:.5s;
+}
+
+#jogo{
+
+    background:#151515;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    border:1px solid #333;
+
+    box-shadow:
+    0 0 20px rgba(255,255,255,.05);
+}
+
+#tituloHistoria{
+
+    text-align:center;
+
+    font-size:2.2rem;
+
+    margin-bottom:30px;
+
+    color:white;
+}
+
+#textoHistoria{
+
+    font-size:1.3rem;
+
+    line-height:1.8;
+
+    min-height:180px;
+
+    margin-bottom:35px;
+
+    text-align:center;
+}
+
+#opcoes{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+}
+
+#opcoes button{
+
+    background:#2f2f2f;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 26px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:1rem;
+}
+
+#opcoes button:hover{
+
+    background:#555;
+
+    transform:translateY(-3px);
+}
+
+.hidden{
+    display:none !important;
+}
+
+#finalTela{
+
+    text-align:center;
+
+    background:#151515;
+
+    border-radius:15px;
+
+    border:1px solid #333;
+
+    padding:40px;
+}
+
+#imagemFinal{
+
+    width:100%;
+
+    max-width:700px;
+
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    border:2px solid #444;
+
+    margin-bottom:30px;
+}
+
+#tituloFinal{
+
+    font-size:2.3rem;
+
+    margin-bottom:20px;
+
+    color:white;
+}
+
+#descricaoFinal{
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+#contadorFinais{
+
+    background:#202020;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:25px;
+
+    font-size:1.1rem;
+}
+
+#finalTela button{
+
+    background:#444;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#finalTela button:hover{
+    background:#666;
+}
+
+#painelConquistas{
+
+    position:fixed;
+
+    top:80px;
+    right:20px;
+
+    width:350px;
+
+    max-height:80vh;
+
+    overflow-y:auto;
+
+    background:#111;
+
+    border:1px solid #444;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    z-index:999;
+}
+
+#painelConquistas h2{
+
+    margin-bottom:20px;
+
+    text-align:center;
+}
+
+#listaConquistas{
+
+    margin-bottom:25px;
+
+    line-height:2;
+}
+
+#estatisticas{
+
+    background:#1d1d1d;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    line-height:1.8;
+}
+
+#painelConquistas button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    background:#444;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+#painelConquistas button:hover{
+    background:#666;
+}
+
+footer{
+
+    margin-top:50px;
+
+    text-align:center;
+
+    padding:25px;
+
+    border-top:1px solid #333;
+
+    color:#9d9d9d;
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#444;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#666;
+}
+
+@media(max-width:768px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+    #jogo{
+        padding:25px;
+    }
+
+    #tituloHistoria{
+        font-size:1.7rem;
+    }
+
+    #textoHistoria{
+        font-size:1.1rem;
+    }
+
+    #opcoes{
+        flex-direction:column;
+    }
+
+    #opcoes button{
+        width:100%;
+    }
+
+    #painelConquistas{
+
+        width:90%;
+
+        right:5%;
+    }
+
+    #imagemFinal{
+        height:250px;
+    }
+}
